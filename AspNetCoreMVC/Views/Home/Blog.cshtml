@@ -1,0 +1,54 @@
+﻿
+
+@using AspNetCoreMVC.Models
+@using AspNetCoreMVC.Models.ViewModel
+@model BlogVM
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        h1, h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%
+        }
+
+        td, th {
+            border: 1px solid blue;
+            text-align: center;
+            padding: 9px;
+        }
+
+        img {
+            width: 50px;
+            height: 100px
+        }
+    </style>
+</head>
+<body>
+    <h1> YAZAR'IN KİTAPLARI </h1>
+    <h2>@Model.blogAuthor.Name @Model.blogAuthor.Surname</h2>
+
+    <table>
+        <tr>
+            <td>Resim</td>
+            <td>Kitap Adı</td>
+            <td>Açıklama</td>
+
+        </tr>
+        @foreach (var item in Model.blogDetails)
+        {
+            <tr>
+                <td><img src="/Images/@item.Image" /></td>
+                <td>@item.BookName</td>
+                <td>@item.Description</td>
+
+
+            </tr>
+        }
+    </table>
+</body>
+</html>

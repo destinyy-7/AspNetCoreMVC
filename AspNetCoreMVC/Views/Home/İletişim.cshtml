@@ -1,0 +1,32 @@
+﻿@model AspNetCoreMVC.Models.BlogAuthor
+
+
+<h1>İLETİŞİM</h1>
+
+<h2>Ben @Model.Name @Model.Surname aşağıdaki hesaplardan iletişime geçebilirsiniz :)</h2>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+
+        button {
+            background-color: #1abc9c;
+            color: white;
+            width: auto
+        }
+
+            button:hover {
+                background-color: #9b59b6;
+                color: black;
+            }
+    </style>
+
+</head>
+<body>
+    <button onclick="window.location.href = 'https://www.linkedin.com/in/kader-g%C3%BCne%C5%9F7';">Linkedin ile iletişime geç</button>
+
+    <button onclick="window.location.href = 'https://github.com/destinyy-7';">Git Hub ile iletişime geç</button>
+
+</body>
+</html>
+
+
